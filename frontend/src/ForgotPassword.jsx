@@ -31,7 +31,7 @@ function ForgotPassword() {
     const handleSubmit = (e) => {
         e.preventDefault();
           setLoading(true);
-        Axios.post("http://localhost:3000/user/forgot-password", {
+        axios.post("http://localhost:3000/user/forgot-password", {
 
             email: email
         })
