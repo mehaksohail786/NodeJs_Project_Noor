@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Axios from 'Axios'
+import axios from 'axios'
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -29,7 +29,7 @@ const [message, setMessage] = useState("");
    const handleSubmit = (e) => {
     e.preventDefault();
 
-    Axios.post("http://localhost:3000/user/register", {
+    axios.post("http://localhost:3000/user/register", {
       username:username,
       email: email,
       password: password
