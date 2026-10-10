@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import Axios from 'Axios'
+import axios from "axios";
 import { Button } from "@/components/ui/button"
 import { useNavigate, Link } from "react-router-dom";
 import {
