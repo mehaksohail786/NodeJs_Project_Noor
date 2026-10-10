@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import Axios from "Axios";
+import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -44,7 +44,7 @@ function VerifyOTP() {
       return;
     }
 
-    Axios.post(`http://localhost:3000/user/verify-otp/${encodeURIComponent(email)}`, {
+    axios.post(`http://localhost:3000/user/verify-otp/${encodeURIComponent(email)}`, {
       otp: otp
     })
       .then((response) => {
