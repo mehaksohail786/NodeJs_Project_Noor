@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Axios from 'Axios'
+import axios from 'axios'
 import { Button } from "@/components/ui/button"
 import { useNavigate, Link } from "react-router-dom";
 import {
@@ -30,7 +30,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    Axios.post("http://localhost:3000/user/login", {
+    axios.post("http://localhost:3000/user/login", {
 
       email: email,
       password: password
