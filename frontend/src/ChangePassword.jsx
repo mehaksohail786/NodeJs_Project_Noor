@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react"; 
-import Axios from "Axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
  import { Button } from "@/components/ui/button"; 
  import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
 
     const email = localStorage.getItem("email");
 
-  Axios.post(
+  axios.post(
     `http://localhost:3000/user/change-password/${encodeURIComponent(email)}`,
     {
       newPassword: password,
